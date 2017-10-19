@@ -22,8 +22,8 @@ configure(allprojects) {
     apply plugin: 'propdeps-eclipse'
 }
 
-group 'so.sao'
-version '1.0.0-RELEASE'
+group 'com.windhc'
+version '1.0.0'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -41,3 +41,38 @@ dependencies {
 }
 
 compileJava.dependsOn(processResources)
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allJava
+}
+
+// 打包
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+
+            artifact sourceJar {
+                classifier "sources"
+            }
+        }
+    }
+}
+// 如果是发行版本，则上传到发行库。否则上传到快照库。
+def postfixUrl = "service/local/staging/deploy/maven2"
+if (project.version.endsWith("-SNAPSHOT")) {
+    postfixUrl = "content/repositories/snapshots"
+}
+// 发布到本地Maven库和远程Maven服务器
+publishing {
+    repositories {
+        mavenLocal()
+        maven {
+            credentials {
+                username sonatypeUserName
+                password sonatypePwd
+            }
+            url "https://oss.sonatype.org/$postfixUrl/"
+        }
+    }
+}
