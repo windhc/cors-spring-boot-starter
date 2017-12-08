@@ -2,6 +2,9 @@ package com.windhc.cors.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+/**
+ * @author windhc
+ */
 @ConfigurationProperties(prefix = "cors")
 public class CorsProperties {
 

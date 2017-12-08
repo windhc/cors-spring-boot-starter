@@ -12,6 +12,9 @@ import org.springframework.core.Ordered;
 import org.springframework.util.StringUtils;
 import com.windhc.cors.filter.CorsFilter;
 
+/**
+ * @author windhc
+ */
 @Configuration
 @ConditionalOnClass(CorsFilter.class)
 @ConditionalOnWebApplication

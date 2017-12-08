@@ -10,6 +10,9 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.cors.CorsUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+/**
+ * @author windhc
+ */
 public class CorsFilter extends OncePerRequestFilter {
 
     private static final String[] ALLOW_HEADERS = { "Content-Type", "Cache-Control", "Pragma", "Origin", "Cookie", "Link",
