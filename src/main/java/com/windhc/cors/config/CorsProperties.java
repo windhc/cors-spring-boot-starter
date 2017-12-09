@@ -13,12 +13,12 @@ public class CorsProperties {
     private String allowOrigin;
 
     /**
-     * 用于设置Access-Control-Allow-Headers/Access-Control-Expose-Headers
+     * for setting Access-Control-Allow-Headers/Access-Control-Expose-Headers
      */
     private String allowHeaders;
 
     /**
-     * 用于设置Access-Control-Allow-Credentials
+     * for setting Access-Control-Allow-Credentials
      */
     private boolean allowCredentials = false;
 
