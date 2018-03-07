@@ -1,5 +1,8 @@
 # CORS与Spring Boot集成
 
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+![GitHub release](https://img.shields.io/github/release/windhc/cors-spring-boot-starter.svg)
+
 ### 使用方法
 - 添加依赖
 
