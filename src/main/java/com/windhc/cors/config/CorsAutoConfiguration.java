@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * @author windhc
@@ -16,7 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @ConditionalOnWebApplication
 @EnableConfigurationProperties(CorsProperties.class)
 @ConditionalOnProperty(prefix = "cors", name = "enabled", havingValue = "true")
-public class CorsAutoConfiguration extends WebMvcConfigurerAdapter {
+public class CorsAutoConfiguration implements WebMvcConfigurer {
 
     @Autowired
     private CorsProperties properties;

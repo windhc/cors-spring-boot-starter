@@ -4,6 +4,7 @@
 ![GitHub release](https://img.shields.io/github/release/windhc/cors-spring-boot-starter.svg)
 
 ### 使用方法
+- 支持 Spring Boot 2 以上
 - 添加依赖
 
 ```groovy
@@ -18,7 +19,7 @@ cors.enabled=
 cors.mapping-path-pattern=
 # 可选。"*"，表示接受任意域名的请求, 默认是"*"
 cors.allowed-origins=
-# 可选。设置允许跨域的请求方式，例如:GET,POST,PUT等，多个以逗号分隔，"*"代表允许所有的请求方法，默认：GET,HEAD,POST
+# 可选。(重要)设置允许跨域的请求方式，例如:GET,POST,PUT等，多个以逗号分隔，"*"代表允许所有的请求方法，默认：GET,HEAD,POST
 cors.allowed-methods=
 # 可选。配置Access-Control-Allow-Headers, "*"代表允许所有的头，默认允许所有的头
 cors.allowed-headers=
