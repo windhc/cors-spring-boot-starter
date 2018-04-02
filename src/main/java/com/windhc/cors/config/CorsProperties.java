@@ -10,12 +10,6 @@ public class CorsProperties {
 
     /**
      * required
-     * Enable cross-origin request handling for the specified path pattern.
-     * <p>Exact path mapping URIs (such as {@code "/admin"}) are supported as
-     * well as Ant-style path patterns (such as {@code "/admin/**"}).
-     * <p>By default, all origins, all headers, credentials and {@code GET},
-     * {@code HEAD}, and {@code POST} methods are allowed, and the max age
-     * is set to 30 minutes.
      */
     private Boolean enabled;
 
@@ -28,7 +22,7 @@ public class CorsProperties {
      * is set to 30 minutes.
      * pathPattern the path pattern to enable CORS handling for
      */
-    private String mappingPathPattern = "/**";
+    private String pathPattern = "/**";
 
     /**
      * Set the origins to allow, e.g. {@code "http://domain1.com"}.
@@ -88,12 +82,12 @@ public class CorsProperties {
         this.enabled = enabled;
     }
 
-    public String getMappingPathPattern() {
-        return mappingPathPattern;
+    public String getPathPattern() {
+        return pathPattern;
     }
 
-    public void setMappingPathPattern(String mappingPathPattern) {
-        this.mappingPathPattern = mappingPathPattern;
+    public void setPathPattern(String pathPattern) {
+        this.pathPattern = pathPattern;
     }
 
     public String[] getAllowedOrigins() {

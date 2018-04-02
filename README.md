@@ -16,7 +16,7 @@ compile group: "com.windhc", name: "cors-spring-boot-starter", version: "1.1.0"
 # 必选。启用cors，值是一个布尔值
 cors.enabled=
 # 可选。设置允许跨域的接口地址，/**代表所有地址，默认/**
-cors.mapping-path-pattern=
+cors.path-pattern=
 # 可选。"*"，表示接受任意域名的请求, 默认是"*"
 cors.allowed-origins=
 # 可选。(重要)设置允许跨域的请求方式，例如:GET,POST,PUT等，多个以逗号分隔，"*"代表允许所有的请求方法，默认：GET,HEAD,POST

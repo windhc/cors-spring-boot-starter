@@ -23,7 +23,7 @@ public class CorsAutoConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        CorsRegistration corsRegistration = registry.addMapping(properties.getMappingPathPattern());
+        CorsRegistration corsRegistration = registry.addMapping(properties.getPathPattern());
         corsRegistration
                 .allowedOrigins(properties.getAllowedOrigins())
                 .allowedHeaders(properties.getAllowedHeaders())
